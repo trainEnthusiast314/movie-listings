@@ -28,6 +28,9 @@
                 node.appendChild(textnode);
                 document.getElementById("list1").appendChild(node);
             }
+            function add2() {
+                document.getElementById('list1').innerHTML += '<li><input id="time" type="time" name ="date1time3" /></li>';
+            }
         </script>
     </head>
     <body>
@@ -173,7 +176,7 @@
                 </table>
                 <table>
                     <tr>
-                        <td><input type="button" value="Add more" onclick="add1()" /></td>
+                        <td><input type="button" value="Add more" onclick="add2()" /></td>
                         <td><input type="button" value="Add more" /></td>
                         <td><input type="button" value="Add more" /></td>
                         <td><input type="button" value="Add more" /></td>
