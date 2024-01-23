@@ -17,5 +17,10 @@
 a:link, a:visited{
     margin: 4rem;
     color: black;
-    
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.movie-poster{
+    margin:3rem;
 }
