@@ -1,0 +1,26 @@
+.homepage-banner{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5%;
+    margin: 0rem;
+    border-radius: 10px;
+    font-family:sans-serif;
+    font-size: 10rem;
+}
+
+.nav-bar{
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+a:link, a:visited{
+    margin: 4rem;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.movie-poster{
+    margin:3rem;
+}
