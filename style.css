@@ -1,3 +1,6 @@
+body{
+    display: flexbox;
+}
 .homepage-banner{
     background-color: black;
     color: white;
