@@ -23,7 +23,10 @@
         </style>
         <script>
             function add1() {
-                document.getElementsByName
+                const node = document.createElement("li");
+                const textnode = document.createTextNode("Water");
+                node.appendChild(textnode);
+                document.getElementById("list1").appendChild(node);
             }
         </script>
     </head>
@@ -125,7 +128,7 @@
                     </thead>
 
                     <tbody><tr>
-                        <td><ul>
+                        <td><ul id="list1">
                             <li><input id="time" type="time" name ="date1time1" /></li>
                             <li><input id="time" type="time" name ="date1time2" /></li>
                             <li><input id="time" type="time" name ="date1time3" /></li>
@@ -167,6 +170,17 @@
                             <li><input id="time" type="time" name ="date7time3" /></li>
                         </ul></td>
                     </tbody></tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><input type="button" value="Add more" onclick="add1()" /></td>
+                        <td><input type="button" value="Add more" /></td>
+                        <td><input type="button" value="Add more" /></td>
+                        <td><input type="button" value="Add more" /></td>
+                        <td><input type="button" value="Add more" /></td>
+                        <td><input type="button" value="Add more" /></td>
+                        <td><input type="button" value="Add more" /></td>
+                    </tr>
                 </table>
             </fieldset>    
             <br /><label><input type="submit" /></label>
