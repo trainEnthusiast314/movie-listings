@@ -93,3 +93,34 @@ input {
 
 .grid {
 }
+
+h3 {
+  text-align: center;
+}
+.movie-time {
+  border: solid black;
+  text-align: center;
+  border-radius: 15px;
+  margin: 0 60em;
+}
+.movie-time select {
+  margin: 1em 0;
+}
+.movie-time button {
+  margin: 1em 0;
+}
+
+.row1 div {
+  display: inline;
+}
+.row2 div {
+  display: inline;
+}
+
+div img {
+  height: 2em;
+  width: 2em;
+}
+.row3 div {
+  display: inline;
+}
