@@ -124,3 +124,12 @@ div img {
 .row3 div {
   display: inline;
 }
+.row1 div:hover {
+  background-color: lightblue;
+}
+.row2 div:hover {
+  background-color: lightblue;
+}
+.row3 div:hover {
+  background-color: lightblue;
+}
