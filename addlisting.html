@@ -6,13 +6,25 @@
         <title>Add Listing</title>
         <script>
             function add1() {
-                const node = document.createElement("li");
-                const textnode = document.createTextNode("Water");
-                node.appendChild(textnode);
-                document.getElementById("list1").appendChild(node);
+                document.getElementById('list1').innerHTML += '<li><input id="time" type="time" name ="date1time" /></li>';
             }
             function add2() {
-                document.getElementById('list1').innerHTML += '<li><input id="time" type="time" name ="date1time3" /></li>';
+                document.getElementById('list2').innerHTML += '<li><input id="time" type="time" name ="date2time" /></li>';
+            }
+            function add3() {
+                document.getElementById('list3').innerHTML += '<li><input id="time" type="time" name ="date3time" /></li>';
+            }
+            function add4() {
+                document.getElementById('list4').innerHTML += '<li><input id="time" type="time" name ="date4time" /></li>';
+            }
+            function add5() {
+                document.getElementById('list5').innerHTML += '<li><input id="time" type="time" name ="date5time" /></li>';
+            }
+            function add6() {
+                document.getElementById('list6').innerHTML += '<li><input id="time" type="time" name ="date6time" /></li>';
+            }
+            function add7() {
+                document.getElementById('list7').innerHTML += '<li><input id="time" type="time" name ="date7time" /></li>';
             }
         </script>
     </head>
@@ -73,37 +85,37 @@
                             <li><input id="time" type="time" name ="date1time3" /></li>
                         </ul></td>
 
-                        <td><ul>
+                        <td><ul id="list2">
                             <li><input id="time" type="time" name ="date2time1" /></li>
                             <li><input id="time" type="time" name ="date2time2" /></li>
                             <li><input id="time" type="time" name ="date2time3" /></li>
                         </ul></td>
 
-                        <td><ul>
+                        <td><ul id="list3">
                             <li><input id="time" type="time" name ="date3time1" /></li>
                             <li><input id="time" type="time" name ="date3time2" /></li>
                             <li><input id="time" type="time" name ="date3time3" /></li>
                         </ul></td>
 
-                        <td><ul>
+                        <td><ul id="list4">
                             <li><input id="time" type="time" name ="date4time1" /></li>
                             <li><input id="time" type="time" name ="date4time2" /></li>
                             <li><input id="time" type="time" name ="date4time3" /></li>
                         </ul></td>
 
-                        <td><ul>
+                        <td><ul id="list5">
                             <li><input id="time" type="time" name ="date5time1" /></li>
                             <li><input id="time" type="time" name ="date5time2" /></li>
                             <li><input id="time" type="time" name ="date5time3" /></li>
                         </ul></td>
 
-                        <td><ul>
+                        <td><ul id="list6">
                             <li><input id="time" type="time" name ="date6time1" /></li>
                             <li><input id="time" type="time" name ="date6time2" /></li>
                             <li><input id="time" type="time" name ="date6time3" /></li>
                         </ul></td>
 
-                        <td><ul>
+                        <td><ul id="list7">
                             <li><input id="time" type="time" name ="date7time1" /></li>
                             <li><input id="time" type="time" name ="date7time2" /></li>
                             <li><input id="time" type="time" name ="date7time3" /></li>
@@ -112,13 +124,13 @@
                 </table>
                 <table>
                     <tr>
+                        <td><input type="button" value="Add more" onclick="add1()" /></td>
                         <td><input type="button" value="Add more" onclick="add2()" /></td>
-                        <td><input type="button" value="Add more" /></td>
-                        <td><input type="button" value="Add more" /></td>
-                        <td><input type="button" value="Add more" /></td>
-                        <td><input type="button" value="Add more" /></td>
-                        <td><input type="button" value="Add more" /></td>
-                        <td><input type="button" value="Add more" /></td>
+                        <td><input type="button" value="Add more" onclick="add3()" /></td>
+                        <td><input type="button" value="Add more" onclick="add4()" /></td>
+                        <td><input type="button" value="Add more" onclick="add5()" /></td>
+                        <td><input type="button" value="Add more" onclick="add6()" /></td>
+                        <td><input type="button" value="Add more" onclick="add7()" /></td>
                     </tr>
                 </table>
             </fieldset>    
