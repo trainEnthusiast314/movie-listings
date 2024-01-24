@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
         <title>Add Listing</title>
-        <style>
-            table {
-                width: 100%;
-            }
-            tr {
-                text-align: center;
-            }
-
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            #time {
-                margin:5px;
-            }
-            
-        </style>
         <script>
             function add1() {
                 const node = document.createElement("li");
@@ -34,12 +16,20 @@
         </script>
     </head>
     <body>
-        <h1>Add Film Listing</h1>
+        <header>
+            <h1 class="homepage-banner">welcome to super movie listings</h1>
+            <nav class="nav-bar">
+                <a href="profile.html">profile</a>
+                <a href="">movie listings</a>
+                <a href="addlisting.html">add movie</a>
+            </nav>
+        </header>
+        <h1  class="pagetitle">Add Film Listing</h1>
 
         <form action="http://www.nextpoint.co.uk/test.php" method="post">
             <fieldset>
-                <label>
-                    Cinema<br />
+                <label class="grid1">
+                    <h3>Cinema</h3>
                     <select required>
                         <option>Cineworld</option>
                         <option>Empire</option>
@@ -51,74 +41,16 @@
                         <option>Vue</option>
                     </select><br /><br />
                 </label>
-                <label>
-                Location<br /><input type="text" required/>
+                <label class="grid2">
+                <h3>Location</h3>
+                    <input type="text" placeholder="E.g. Manchester"/>
                 </label>
+
             </fieldset>
             <br />
             <fieldset>
-                <label>Film <br /><input type="text" required/></label><br /><br />
-                Timings <br />
-                <table>
-                    <thead>
-                        <th><input type="date" name ="date1" value="2024-01-26"/></th>
-                        <th><input type="date" name ="date2" value="2024-01-27"/></th>
-                        <th><input type="date" name ="date3" value="2024-01-28"/></th>
-                        <th><input type="date" name ="date4" value="2024-01-29"/></th>
-                        <th><input type="date" name ="date5" value="2024-01-30"/></th>
-                        <th><input type="date" name ="date6" value="2024-01-31"/></th>
-                        <th><input type="date" name ="date7" value="2024-02-01"/></th>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td><input type="time" name ="date2time1" /></td>
-                            <td><input type="time" name ="date3time1" /></td>
-                            <td><input type="time" name ="date4time1" /></td>
-                            <td><input type="time" name ="date5time1" /></td>
-                            <td><input type="time" name ="date6time1" /></td>
-                            <td><input type="time" name ="date7time1" /></td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="time" name ="date1time2" /></td>
-                            <td><input type="time" name ="date2time2" /></td>
-                            <td><input type="time" name ="date3time2" /></td>
-                            <td><input type="time" name ="date4time2" /></td>
-                            <td><input type="time" name ="date5time2" /></td>
-                            <td><input type="time" name ="date6time2" /></td>
-                            <td><input type="time" name ="date7time2" /></td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="time" name ="date1time3" /></td>
-                            <td><input type="time" name ="date2time3" /></td>
-                            <td><input type="time" name ="date3time3" /></td>
-                            <td><input type="time" name ="date4time3" /></td>
-                            <td><input type="time" name ="date5time3" /></td>
-                            <td><input type="time" name ="date6time3" /></td>
-                            <td><input type="time" name ="date7time3" /></td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="time" name ="date1time4" /></td>
-                            <td><input type="time" name ="date2time4" /></td>
-                            <td><input type="time" name ="date3time4" /></td>
-                            <td><input type="time" name ="date4time4" /></td>
-                            <td><input type="time" name ="date5time4" /></td>
-                            <td><input type="time" name ="date6time4" /></td>
-                            <td><input type="time" name ="date7time4" /></td>
-                        </tr>               
-                    </tbody>
-                </table>
-            </fieldset><br />
-
-            <label><input type="submit" /></label><br />
-
-            <br /><fieldset>
-                <label>Film <br /><input type="text" required/></label><br /><br />
-                Timings <br />
+                <label><h3>Film</h3><input type="text" required/></label><br /><br />
+                <h3>Timings</h3>
                 <table>
                     <thead>
                         <th><input type="date" name ="date1" value="2024-01-26"/></th>
