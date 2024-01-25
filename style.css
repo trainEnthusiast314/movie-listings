@@ -184,3 +184,20 @@ div img {
 .row3 div:hover {
   background-color: lightblue;
 }
+
+.posters {
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+
+.posters:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
