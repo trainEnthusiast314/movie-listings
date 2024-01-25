@@ -3,30 +3,8 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="film.png" type="image/x-icon" />
+        <script src="addlisting.js"></script>
         <title>Add Listing</title>
-        <script>
-            function add1() {
-                document.getElementById('list1').innerHTML += '<li><input id="time" type="time" name ="date1time" /></li>';
-            }
-            function add2() {
-                document.getElementById('list2').innerHTML += '<li><input id="time" type="time" name ="date2time" /></li>';
-            }
-            function add3() {
-                document.getElementById('list3').innerHTML += '<li><input id="time" type="time" name ="date3time" /></li>';
-            }
-            function add4() {
-                document.getElementById('list4').innerHTML += '<li><input id="time" type="time" name ="date4time" /></li>';
-            }
-            function add5() {
-                document.getElementById('list5').innerHTML += '<li><input id="time" type="time" name ="date5time" /></li>';
-            }
-            function add6() {
-                document.getElementById('list6').innerHTML += '<li><input id="time" type="time" name ="date6time" /></li>';
-            }
-            function add7() {
-                document.getElementById('list7').innerHTML += '<li><input id="time" type="time" name ="date7time" /></li>';
-            }
-        </script>
     </head>
     
     <body>
@@ -65,8 +43,8 @@
             </fieldset>
             <br />
             <fieldset>
-                <label><h3>Film</h3><input type="text" required/></label><br /><br />
-                <h3>Timings</h3>
+                <label><h3 class="leftheading">Film</h3><input type="text" required/></label><br /><br />
+                <h3 class="leftheading">Timings</h3>
                 <table>
                     <thead>
                         <th><input type="date" name ="date1" value="2024-01-26"/></th>
@@ -134,7 +112,7 @@
                     </tr>
                 </table>
             </fieldset>    
-            <br /><label><input type="submit" /></label>
+            <a href="addlistingconfirm.html"><input type="button" value="Submit" class="sub"/></a>
         </form>
     </body>
 </html>

@@ -93,18 +93,23 @@ body {
     margin-top: 0px;
 }
 
-[type="submit"] {
+[type="date"]:hover, [type="submit"]:hover, [type="button"]:hover {
+    background-color: grey;
+}
+
+.sub {
     padding: 10px 15px;
     font-size: 1.2rem;
     float: right;
     margin-right: 35px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
-form [type="text"] {
+.tbox, form [type="text"] {
     width: 290px;
     height: 36px;
     border-radius: 5px;
+    margin-left: 30px;
 }
 
 form select {
@@ -200,4 +205,44 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.leftheading {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.confpage {
+  padding: 10px;
+  display: flex;
+  gap: 3%;
+  justify-content: center;
+}
+
+.confpage span {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 25%;
+  height: 150px;
+  padding: 0px 20px;
+  text-align: center;
+}
+
+.confpage h2 {
+  text-align: left;
+}
+
+.tbox {
+  margin-left: 0;
+}
+
+#timings
+{
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 400px;
+  padding: 0px 20px;
+  margin: 20px 90px;
+  display: flex;
+
 }
