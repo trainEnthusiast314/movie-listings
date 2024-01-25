@@ -3,7 +3,8 @@
   <head>
     <title>Profile</title>
     <style>
-      .center {
+      
+      .center{
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -11,13 +12,30 @@
       ul {
         list-style: none;
       }
+      fieldset{
+            border: 3px solid black;
+            width: 400px;
+            margin:auto;
+        }
+
+      .box{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+      }
+
+
+       
+
+       
     </style>
-    <script></script>
+    
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>movie listing homepage</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="profile.css" />
     <link rel="shortcut icon" href="film.png" type="image/x-icon" />
   </head>
   <body>
@@ -31,9 +49,10 @@
         </ul>
       </nav>
     </header>
-
-    <form>
+    <div id ="profile">
+    <form class="box" action = "http://www.nextpoint.co.uk/test.php" method = "post">
       <img
+        style = "clip-path: circle();"
         id="myImg"
         src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-541.jpg?size=338&ext=jpg&ga=GA1.1.632798143.1705881600&semt=ais"
         class="center" />
@@ -42,43 +61,38 @@
       <fieldset>
         <legend>My profile</legend>
 
-        <ul>
-          <li>
-            <label for="firstName">First Name</label>
-            <input id="firstName" name="firstName" type="text" required />
-          </li>
+        <div style = "text-align: center;">
+          
+          <!--<div><label for = "firstName" >First Name</label></div>-->
+          <div><input  id = "firstName" name = "firstName" type="text" required placeholder="First Name"/></div>
+          <br/>
+          
+         <!--<div><label>for = "surname">Surname</div>--> 
+          <div><input id = "surname" name = "surname" type="text" required placeholder="Last Name"/></div>
+          
+          <br/>
+          
+          <!--<div for = "email">Email</div>-->
+          <div><input id = "email" name = "email" type="email" required placeholder = "mycinema@email.com"/></div>
+          
+          <br/>
+          
+             <!-- <label for = "passsword">Password</label>-->
+          <div><input id = "password" name = "password" type="password" required placeholder="Password"/></div>
+          
+          <br/>
+          
+              <!--<label for = "conpasssword">Confirm Password</label>-->
+          <div><input id = "conpassword" name = "conpassword" type="password" required placeholder="Confirm Password"/></div>
+          
           <br />
-          <li>
-            <label for="surname">Surname</label>
-            <input id="surname" name="surname" type="text" required />
-          </li>
-          <br />
-          <li>
-            <label for="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              placeholder="mycinema@email.com" />
-          </li>
-          <br />
-          <li>
-            <label for="passsword">Password</label>
-            <input id="password" name="password" type="password" required />
-          </li>
-          <br />
-          <li>
-            <label for="conpasssword">Confirm Password</label>
-            <input
-              id="conpassword"
-              name="conpassword"
-              type="password"
-              required />
-          </li>
-        </ul>
+         </main>
+        <br>
+
+        
         <button type="submit" class="center">Save</button>
       </fieldset>
     </form>
+  </section>
   </body>
 </html>
