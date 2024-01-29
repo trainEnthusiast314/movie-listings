@@ -214,7 +214,6 @@ h3 {
   visibility: visible;
 }
 .box {
-  background-color: blue;
   display: inline-block;
   flex-direction: column;
   column-gap: 50px;
