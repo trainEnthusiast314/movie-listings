@@ -24,7 +24,7 @@
             <fieldset>
                 <label class="grid1">
                     <h3>Cinema</h3>
-                    <select required>
+                    <select name="cinema" required>
                         <option>Cineworld</option>
                         <option>Empire</option>
                         <option>Everyman</option>
@@ -37,82 +37,94 @@
                 </label>
                 <label class="grid2">
                 <h3>Location</h3>
-                    <input type="text" placeholder="E.g. Manchester"/>
+                    <input type="text" name="location" placeholder="E.g. Manchester"/>
                 </label>
 
             </fieldset>
             <br />
             <fieldset>
-                <label><h3 class="leftheading">Film</h3><input type="text" required/></label><br /><br />
+                <label><h3 class="leftheading">Film</h3><input type="text" name="filmtitle"  required/></label><br /><br />
                 <h3 class="leftheading">Timings</h3>
                 <table>
                     <thead>
-                        <th><input type="date" name ="date1" value="2024-01-26"/></th>
-                        <th><input type="date" name ="date2" value="2024-01-27"/></th>
-                        <th><input type="date" name ="date3" value="2024-01-28"/></th>
-                        <th><input type="date" name ="date4" value="2024-01-29"/></th>
-                        <th><input type="date" name ="date5" value="2024-01-30"/></th>
-                        <th><input type="date" name ="date6" value="2024-01-31"/></th>
-                        <th><input type="date" name ="date7" value="2024-02-01"/></th>
+                        <th><input type="date" name="date1" id="date1"/></th>
+                        <th><input type="date" name="date2" id="date2"/></th>
+                        <th><input type="date" name="date3" id="date3"/></th>
+                        <th><input type="date" name="date4" id="date4"/></th>
+                        <th><input type="date" name="date5" id="date5"/></th>
+                        <th><input type="date" name="date6" id="date6"/></th>
+                        <th><input type="date" name="date7" id="date7"/></th>
                     </thead>
 
                     <tbody><tr>
                         <td><ul id="list1">
-                            <li><input id="time" type="time" name ="date1time1" /></li>
-                            <li><input id="time" type="time" name ="date1time2" /></li>
-                            <li><input id="time" type="time" name ="date1time3" /></li>
-                        </ul></td>
+                            <li><input id="time" type="time" name ="date1time" /></li>
+                        </ul><input type="button" value="Add more" onclick="add('list1')" /></td>
 
                         <td><ul id="list2">
-                            <li><input id="time" type="time" name ="date2time1" /></li>
-                            <li><input id="time" type="time" name ="date2time2" /></li>
-                            <li><input id="time" type="time" name ="date2time3" /></li>
-                        </ul></td>
+                            <li><input id="time" type="time" name ="date2time" /></li>
+                        </ul><input type="button" value="Add more" onclick="add('list2')" /></td>
 
                         <td><ul id="list3">
-                            <li><input id="time" type="time" name ="date3time1" /></li>
-                            <li><input id="time" type="time" name ="date3time2" /></li>
-                            <li><input id="time" type="time" name ="date3time3" /></li>
-                        </ul></td>
+                            <li><input id="time" type="time" name ="date3time" /></li>
+                        </ul><input type="button" value="Add more" onclick="add('list3')" /></td>
 
                         <td><ul id="list4">
-                            <li><input id="time" type="time" name ="date4time1" /></li>
-                            <li><input id="time" type="time" name ="date4time2" /></li>
-                            <li><input id="time" type="time" name ="date4time3" /></li>
-                        </ul></td>
+                            <li><input id="time" type="time" name ="date4time" /></li>
+                        </ul><input type="button" value="Add more" onclick="add('list4')" /></td>
 
                         <td><ul id="list5">
-                            <li><input id="time" type="time" name ="date5time1" /></li>
-                            <li><input id="time" type="time" name ="date5time2" /></li>
-                            <li><input id="time" type="time" name ="date5time3" /></li>
-                        </ul></td>
+                            <li><input id="time" type="time" name ="date5time" /></li>
+                        </ul><input type="button" value="Add more" onclick="add('list5')" /></td>
 
                         <td><ul id="list6">
-                            <li><input id="time" type="time" name ="date6time1" /></li>
-                            <li><input id="time" type="time" name ="date6time2" /></li>
-                            <li><input id="time" type="time" name ="date6time3" /></li>
-                        </ul></td>
+                            <li><input id="time" type="time" name ="date6time" /></li>
+                        </ul><input type="button" value="Add more" onclick="add('list6')" /></td>
 
                         <td><ul id="list7">
-                            <li><input id="time" type="time" name ="date7time1" /></li>
-                            <li><input id="time" type="time" name ="date7time2" /></li>
-                            <li><input id="time" type="time" name ="date7time3" /></li>
-                        </ul></td>
+                            <li><input id="time" type="time" name ="date7time" /></li>
+                        </ul><input type="button" value="Add more" onclick="add('list7')" /></td>
                     </tbody></tr>
                 </table>
-                <table>
-                    <tr>
-                        <td><input type="button" value="Add more" onclick="add1()" /></td>
-                        <td><input type="button" value="Add more" onclick="add2()" /></td>
-                        <td><input type="button" value="Add more" onclick="add3()" /></td>
-                        <td><input type="button" value="Add more" onclick="add4()" /></td>
-                        <td><input type="button" value="Add more" onclick="add5()" /></td>
-                        <td><input type="button" value="Add more" onclick="add6()" /></td>
-                        <td><input type="button" value="Add more" onclick="add7()" /></td>
-                    </tr>
-                </table>
             </fieldset>    
-            <a href="addlistingconfirm.html"><input type="button" value="Submit" class="sub"/></a>
+            <input id="confirm" type="button" value="Submit" class="sub"/></a>
         </form>
+
+
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <h1 class="pagetitle">Add Film Listing</h1>
+            <div class="confpage">
+                <span>
+                    <h2>Cinema Name</h2> 
+                    <h3 data="cinema"></h3>
+                </span>
+
+                <span>
+                    <h2>Location</h2> 
+                    <h3 data="location"></h3>
+                </span>
+
+                <span>
+                    <h2>Film</h2>
+                    <h3 data="filmtitle"></h3>
+                </span>
+            </div>
+
+            <div>
+                <section id="timings">
+                    <h2>Timings</h2>
+                    <p data="date1"></p>
+                    <p data="date2"></p>
+                    <p data="date3"></p>
+                    <p data="date4"></p>
+                    <p data="date5"></p>
+                    <p data="date6"></p>
+                    <p data="date7"></p>
+                </section>
+            </div>
+            
+            <form action="http://www.nextpoint.co.uk/test.php" method="post">
+                <label><input type="submit" class="sub" value="Confirm"/></label>
+            </form>
     </body>
 </html>

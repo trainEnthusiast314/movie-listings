@@ -91,6 +91,8 @@ body {
   margin: 15px;
 }
 
+
+
 [type="date"] {
   margin-top: 0px;
 }
@@ -107,6 +109,10 @@ body {
   float: right;
   margin-right: 35px;
   margin-top: 10px;
+}
+
+fieldset td {
+  vertical-align: top;
 }
 
 .tbox,

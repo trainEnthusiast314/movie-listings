@@ -1,27 +1,68 @@
-function add1() {
-    document.getElementById('list1').innerHTML += '<li><input id="time" type="time" name ="date1time" /></li>';
+function add(item) {
+    let node = document.createElement("li");
+    node.innerHTML = `<input id="time" type="time" name ="date1time" />`;
+    document.getElementById(item).appendChild(node);
 }
 
-function add2() {
-    document.getElementById('list2').innerHTML += '<li><input id="time" type="time" name ="date2time" /></li>';
+
+
+
+
+
+
+let data = {
+
 }
 
-function add3() {
-    document.getElementById('list3').innerHTML += '<li><input id="time" type="time" name ="date3time" /></li>';
+let dataBind = function() {
+    
 }
 
-function add4() {
-    document.getElementById('list4').innerHTML += '<li><input id="time" type="time" name ="date4time" /></li>';
+dataBind.get = function(key) {
+    return data[key];
 }
 
-function add5() {
-    document.getElementById('list5').innerHTML += '<li><input id="time" type="time" name ="date5time" /></li>';
+dataBind.set = function(key, value) {
+    data[key] = value;
 }
 
-function add6() {
-    document.getElementById('list6').innerHTML += '<li><input id="time" type="time" name ="date6time" /></li>';
+/*dataBind.display = function() {
+    document.querySelectorAll('[name], [data]').forEach((item)=>{
+        if(item.value != "" && item.value != undefined) {
+            console.log(item.name, item.value);
+            let key = item.getAttribute("data");
+            item.innerText = data[key];
+        } 
+    })
+}*/
+
+dataBind.display = function() {
+    document.querySelectorAll('[name], [data]').forEach((item)=>{
+        if(item.name == undefined) {
+            let key = item.getAttribute("data");
+            item.innerText = data[key];
+        } 
+    })
 }
 
-function add7() {
-    document.getElementById('list7').innerHTML += '<li><input id="time" type="time" name ="date7time" /></li>';
-}
+window.addEventListener("load", function() {
+
+    document.getElementById("date1").value = "2024-02-02";
+    document.getElementById("date2").value = "2024-02-03";
+    document.getElementById("date3").value = "2024-02-04";
+    document.getElementById("date4").value = "2024-02-05";
+    document.getElementById("date5").value = "2024-02-06";
+    document.getElementById("date6").value = "2024-02-07";
+    document.getElementById("date7").value = "2024-02-08";
+
+    this.document.querySelector('form').addEventListener("input", function(e)
+    {
+        dataBind.set(e.target.name, e.target.value);
+        dataBind.display()
+    })
+
+    
+})
+
+
+
