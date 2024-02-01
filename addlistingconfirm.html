@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="film.png" type="image/x-icon" />
-        <script src="addlisting.js"></script>
+        <script src="addlisting.js" defer></script>
         <title>Add Listing</title>
     </head>
     
@@ -17,28 +17,39 @@
             <li><a href="addlisting.html">add movie</a></li>
           </ul>
         </nav>
-      </header>
+        <script>
+            let data = JSON.parse(sessionStorage.getItem("data"));
+        </script>
+        </header>
         <h1 class="pagetitle">Add Film Listing</h1>
             <div class="confpage">
                 <span>
                     <h2>Cinema Name</h2> 
-                    <h3 data="filmtitle"></h3>
+                    <h3 data="cinema"></h3>
                 </span>
 
                 <span>
                     <h2>Location</h2> 
-                    <input class="tbox" type="text" readonly placeholder="The location you entered" />
+                    <h3 data="location"></h3>
                 </span>
 
                 <span>
                     <h2>Film</h2>
-                    <input class="tbox" type="text" readonly placeholder="The film you entered" />
+                    <h3 data="filmtitle"></h3>
                 </span>
             </div>
 
             <div>
                 <section id="timings">
                     <h2>Timings</h2>
+                    <p data="date1"></p>
+                    <p data="date1time"></p>
+                    <p data="date2"></p>
+                    <p data="date3"></p>
+                    <p data="date4"></p>
+                    <p data="date5"></p>
+                    <p data="date6"></p>
+                    <p data="date7"></p>
                 </section>
             </div>
             

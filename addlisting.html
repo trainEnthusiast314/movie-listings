@@ -3,8 +3,64 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="film.png" type="image/x-icon" />
-        <script src="addlisting.js"></script>
+        <script src="addlisting.js" defer></script>
         <title>Add Listing</title>
+        <script>
+            let data = {};
+        
+            function add1(item) {
+                let node = document.createElement("li");
+                node.innerHTML = `<input id="time" type="time" name ="date1time" onchange="addTime(date1.value, this.value)"/>`;
+                document.getElementById(item).appendChild(node);
+            }
+
+            function add2(item) {
+                let node = document.createElement("li");
+                node.innerHTML = `<input id="time" type="time" name ="date2time" onchange="addTime(date2.value, this.value)"/>`;
+                document.getElementById(item).appendChild(node);
+            }
+
+            function add3(item) {
+                let node = document.createElement("li");
+                node.innerHTML = `<input id="time" type="time" name ="date3time" onchange="addTime(date3.value, this.value)"/>`;
+                document.getElementById(item).appendChild(node);
+            }
+
+            function add4(item) {
+                let node = document.createElement("li");
+                node.innerHTML = `<input id="time" type="time" name ="date4time" onchange="addTime(date4.value, this.value)"/>`;
+                document.getElementById(item).appendChild(node);
+            }
+
+            function add5(item) {
+                let node = document.createElement("li");
+                node.innerHTML = `<input id="time" type="time" name ="date5time" onchange="addTime(date5.value, this.value)"/>`;
+                document.getElementById(item).appendChild(node);
+            }
+
+            function add6(item) {
+                let node = document.createElement("li");
+                node.innerHTML = `<input id="time" type="time" name ="date6time" onchange="addTime(date6.value, this.value)"/>`;
+                document.getElementById(item).appendChild(node);
+            }
+
+            function add7(item) {
+                let node = document.createElement("li");
+                node.innerHTML = `<input id="time" type="time" name ="date7time" onchange="addTime(date7.value, this.value)"/>`;
+                document.getElementById(item).appendChild(node);
+            }
+
+            filmtimes = new Map();
+
+            function addTime(date, time) {
+                if (filmtimes.has(date)) {
+                    filmtimes.get(date).push(time)
+                } else {
+                    filmtimes.set(date, [])
+                    filmtimes.get(date).push(time)
+                }
+            }
+        </script>
     </head>
     
     <body>
@@ -43,7 +99,7 @@
             </fieldset>
             <br />
             <fieldset>
-                <label><h3 class="leftheading">Film</h3><input type="text" name="filmtitle"  required/></label><br /><br />
+                <label><h3 class="leftheading">Film</h3><input type="text" name="filmtitle" required/></label><br /><br />
                 <h3 class="leftheading">Timings</h3>
                 <table>
                     <thead>
@@ -58,73 +114,36 @@
 
                     <tbody><tr>
                         <td><ul id="list1">
-                            <li><input id="time" type="time" name ="date1time" /></li>
-                        </ul><input type="button" value="Add more" onclick="add('list1')" /></td>
+                            <li><input id="time" type="time" name ="date1time" onchange="addTime(date1.value, this.value)"/></li>
+                        </ul><input type="button" value="Add more" onclick="add1('list1')" /></td>
 
                         <td><ul id="list2">
-                            <li><input id="time" type="time" name ="date2time" /></li>
-                        </ul><input type="button" value="Add more" onclick="add('list2')" /></td>
+                            <li><input id="time" type="time" name ="date2time" onchange="addTime(date2.value, this.value)"/></li>
+                        </ul><input type="button" value="Add more" onclick="add2('list2')" /></td>
 
                         <td><ul id="list3">
-                            <li><input id="time" type="time" name ="date3time" /></li>
-                        </ul><input type="button" value="Add more" onclick="add('list3')" /></td>
+                            <li><input id="time" type="time" name ="date3time" onchange="addTime(date3.value, this.value)"/></li>
+                        </ul><input type="button" value="Add more" onclick="add3('list3')" /></td>
 
                         <td><ul id="list4">
-                            <li><input id="time" type="time" name ="date4time" /></li>
-                        </ul><input type="button" value="Add more" onclick="add('list4')" /></td>
+                            <li><input id="time" type="time" name ="date4time" onchange="addTime(date4.value, this.value)"/></li>
+                        </ul><input type="button" value="Add more" onclick="add4('list4')" /></td>
 
                         <td><ul id="list5">
-                            <li><input id="time" type="time" name ="date5time" /></li>
-                        </ul><input type="button" value="Add more" onclick="add('list5')" /></td>
+                            <li><input id="time" type="time" name ="date5time" onchange="addTime(date5.value, this.value)"/></li>
+                        </ul><input type="button" value="Add more" onclick="add5('list5')" /></td>
 
                         <td><ul id="list6">
-                            <li><input id="time" type="time" name ="date6time" /></li>
-                        </ul><input type="button" value="Add more" onclick="add('list6')" /></td>
+                            <li><input id="time" type="time" name ="date6time" onchange="addTime(date6.value, this.value)"></li>
+                        </ul><input type="button" value="Add more" onclick="add6('list6')" /></td>
 
                         <td><ul id="list7">
-                            <li><input id="time" type="time" name ="date7time" /></li>
-                        </ul><input type="button" value="Add more" onclick="add('list7')" /></td>
+                            <li><input id="time" type="time" name ="date7time" onchange="addTime(date7.value, this.value)"/></li>
+                        </ul><input type="button" value="Add more" onclick="add7('list7')" /></td>
                     </tbody></tr>
                 </table>
             </fieldset>    
-            <input id="confirm" type="button" value="Submit" class="sub"/></a>
+            <a href="addlistingconfirm.html"><input id="confirm" type="button" value="Save" onclick="dataBind.save()" class="sub"/></a>
         </form>
-
-
-        <br /><br /><br /><br /><br /><br /><br /><br />
-        <h1 class="pagetitle">Add Film Listing</h1>
-            <div class="confpage">
-                <span>
-                    <h2>Cinema Name</h2> 
-                    <h3 data="cinema"></h3>
-                </span>
-
-                <span>
-                    <h2>Location</h2> 
-                    <h3 data="location"></h3>
-                </span>
-
-                <span>
-                    <h2>Film</h2>
-                    <h3 data="filmtitle"></h3>
-                </span>
-            </div>
-
-            <div>
-                <section id="timings">
-                    <h2>Timings</h2>
-                    <p data="date1"></p>
-                    <p data="date2"></p>
-                    <p data="date3"></p>
-                    <p data="date4"></p>
-                    <p data="date5"></p>
-                    <p data="date6"></p>
-                    <p data="date7"></p>
-                </section>
-            </div>
-            
-            <form action="http://www.nextpoint.co.uk/test.php" method="post">
-                <label><input type="submit" class="sub" value="Confirm"/></label>
-            </form>
     </body>
 </html>
