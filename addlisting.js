@@ -16,6 +16,9 @@ dataBind.set = function(key, value) {
 
 dataBind.display = function() {
     document.querySelectorAll('[name], [data]').forEach((item)=>{
+        if(item instanceof Map) {
+            
+        }
         if(item.name == undefined) {
             let key = item.getAttribute("data");
             item.innerText = data[key];
